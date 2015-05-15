@@ -19,7 +19,6 @@ module GlobalPhone
     end
 
     def parse_international_string(string)
-      string = Number.normalize(string)
       string = strip_leading_plus(string) if starts_with_plus?(string)
 
       if region = region_for_string(string)
